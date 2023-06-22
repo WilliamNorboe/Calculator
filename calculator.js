@@ -88,6 +88,12 @@ function buttonClicked(button){
         }
         display.textContent += ".";
     }
+    else if(buttonPressed == "S"){ // backspace
+        if(display.textContent.length == 1 || replace){
+            return;
+        }
+        display.textContent = display.textContent.slice(0, display.textContent.length - 1);
+    }
     
 }
 
