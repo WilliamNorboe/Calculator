@@ -15,6 +15,7 @@ let num1 =  "";
 let num2 = "";
 let operator = "";
 let replace = false;
+let decimal = false;
 
 function operate(n1, n2, op){
     let result;
@@ -59,19 +60,33 @@ function buttonClicked(button){
         num1 = display.textContent;
         operator = buttonPressed;
         replace = true;
+        decimal = false;
     }
-    else if(buttonPressed == '='){
+    else if(buttonPressed == 'e'){ // equal operator
         if(operator == ""){
             return;
         }
         equalPressed();
     }
-    else if(buttonPressed == "C"){
+    else if(buttonPressed == "C"){ // clear
         num1 = "";
         num2 = "";
         operator = "";
         replace = false;
+        decimal = false;
         display.textContent = "0"
+    }
+    else if(buttonPressed == "p"){ // decimal point
+        if(decimal){ // already a decimal point
+            return;
+        }
+        decimal = true;
+        if(replace){
+            replace = false;
+            display.textContent = "0."
+            return;
+        }
+        display.textContent += ".";
     }
     
 }
