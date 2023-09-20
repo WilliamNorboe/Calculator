@@ -5,7 +5,10 @@ body{
 }
 .header{
     text-align: center;
+    font-size: 40px;
+    color: maroon;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 .row{
     display: flex;
@@ -22,6 +25,8 @@ body{
     /* height: 300px; */
     align-self: center;
     border-radius: 10px;
+    box-shadow: black 10px 10px;
+    padding: 5px
 }
 
 #bS{
