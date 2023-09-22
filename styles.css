@@ -23,11 +23,15 @@ body{
 }
 
 .content{
+    display: flex;
     align-self: center;
     background-image: linear-gradient(to right, lightGrey , lightYellow);
     flex-direction: column;
     width: min-content;
     align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 80dffdpx;
 }
 
 .header{
